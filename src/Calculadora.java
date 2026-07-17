@@ -1,6 +1,26 @@
 import java.util.Scanner;
 
 public class Calculadora {
+
+    //DECLARAÇÃO DAS FUNÇÕES
+    static void soma(double numero1, double numero2){
+        System.out.println("\n- Soma: " + (numero1 + numero2));
+    }
+
+    static void subtracao(double numero1, double numero2){
+        System.out.println("\n- Subtração: " + (numero1 - numero2));
+    }
+
+    static void multiplicacao(double numero1, double numero2){
+        System.out.println("\n- Multiplicação: " + (numero1 * numero2));
+    }
+
+    static void divisao(double numero1, double numero2){
+        System.out.println("\n- Divisão: " + (numero1 / numero2));
+    }
+
+
+    //INICIO DO CÓDIGO
     public static void main() {
         Scanner scanner = new Scanner(System.in);
 
@@ -28,7 +48,7 @@ public class Calculadora {
                     System.out.print("Digite o 2º número: ");
                     numero2 = scanner.nextDouble();
 
-                    System.out.println("\n- Soma: " + (numero1 + numero2));
+                    soma(numero1, numero2);
 
                     break;
 
@@ -39,7 +59,7 @@ public class Calculadora {
                     System.out.print("Digite o 2º número: ");
                     numero2 = scanner.nextDouble();
 
-                    System.out.println("\n- Subtração: " + (numero1 - numero2));
+                    subtracao(numero1, numero2);
 
                     break;
 
@@ -50,7 +70,7 @@ public class Calculadora {
                     System.out.print("Digite o 2º número: ");
                     numero2 = scanner.nextDouble();
 
-                    System.out.println("\n- Multiplicação: " + (numero1 * numero2));
+                    multiplicacao(numero1, numero2);
 
                     break;
 
@@ -66,7 +86,7 @@ public class Calculadora {
                         numero2 = scanner.nextDouble();
                     }
 
-                    System.out.println("\n- Divisão: " + (numero1 / numero2));
+                    divisao(numero1, numero2);
 
                     break;
 
