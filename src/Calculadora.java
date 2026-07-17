@@ -3,19 +3,19 @@ import java.util.Scanner;
 public class Calculadora {
 
     //DECLARAÇÃO DAS FUNÇÕES
-    static void soma(double numero1, double numero2){
+    static void soma(double numero1, double numero2) {
         System.out.println("\n- Soma: " + (numero1 + numero2));
     }
 
-    static void subtracao(double numero1, double numero2){
+    static void subtracao(double numero1, double numero2) {
         System.out.println("\n- Subtração: " + (numero1 - numero2));
     }
 
-    static void multiplicacao(double numero1, double numero2){
+    static void multiplicacao(double numero1, double numero2) {
         System.out.println("\n- Multiplicação: " + (numero1 * numero2));
     }
 
-    static void divisao(double numero1, double numero2){
+    static void divisao(double numero1, double numero2) {
         System.out.println("\n- Divisão: " + (numero1 / numero2));
     }
 
@@ -81,9 +81,8 @@ public class Calculadora {
                     System.out.print("Digite o 2º número: ");
                     numero2 = scanner.nextDouble();
 
-                    while (numero2 <= 0) {
-                        System.out.print("\n- Número Inválido! Digite novamente: ");
-                        numero2 = scanner.nextDouble();
+                    if(numero2 == 0) {
+                        System.out.print("\n- Não é possível dividir por zero.");
                     }
 
                     divisao(numero1, numero2);
